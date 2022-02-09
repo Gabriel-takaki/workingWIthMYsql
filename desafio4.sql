@@ -1,12 +1,11 @@
-SELECT 
-U.user_name AS usuario,
-IF(
-MAX(H.streams) LIKE '%2021',
-	'Usuário ativo',
-    'Usuário inativo'
-) AS 'condicao_usuario'
-FROM 
-SpotifyClone.history AS H
-JOIN SpotifyClone.users AS U
-ON U.user_id = H.user_id
-GROUP BY usuario;
+SELECT
+
+U.nome AS usuario,
+    IF(MAX(H.data_reproducao) LIKE '2021%',
+     'Usuário ativo', 
+     'Usuário inativo') AS condicao_usuario
+FROM SpotifyClone.usuarios AS U
+LEFT JOIN SpotifyClone.historico AS H
+ON U.usuario_id = H.usuario_id
+GROUP BY usuario
+ORDER BY usuario ASC;
