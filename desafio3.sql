@@ -1,5 +1,5 @@
 SELECT U.user_name AS usuario, COUNT(H.song_id) 
-AS qtde_musicas_ouvidas, ROUND(SUM(S.song_time)/60,2) 
+AS qtde_musicas_ouvidas, (ROUND(SUM(S.song_time) / 60 * 100) /100, 2) 
 AS total_minutos
 
 FROM SpotifyClone.history AS H
