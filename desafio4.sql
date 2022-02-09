@@ -9,4 +9,4 @@ FROM
 SpotifyClone.history AS H
 JOIN SpotifyClone.users AS U
 ON U.user_id = H.user_id
-GROUP BY user_name;
+GROUP BY usuario;
