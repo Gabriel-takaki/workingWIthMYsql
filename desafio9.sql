@@ -1,0 +1,1 @@
+SELECT COUNT(cancao_id) AS quantidade_musicas_no_historico FROM SpotifyClone.historico AS H WHERE H.usuario_id = 3;
