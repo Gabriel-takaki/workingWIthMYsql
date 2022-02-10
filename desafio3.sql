@@ -9,3 +9,4 @@ INNER JOIN SpotifyClone.cancoes AS C
 ON C.cancao_id = H.cancao_id
 GROUP BY U.usuario_id
 ORDER BY nome ASC;
+
